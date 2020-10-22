@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap");
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 1em;
+  place-items: center;
+  padding: 1em;
+
+  .card {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: 400ms;
+    padding: 1em;
+
+    .content {
+      display: none;
+    }
+
+    span {
+      font-weight: bold;
+      font-family: "Abril Fatface";
+    }
+
+    p {
+      font-family: "Montserrat";
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    .card {
+      &:hover {
+        padding: 0;
+        background: #000;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        padding: 1em;
+
+        .content {
+          display: grid;
+        }
+
+        p,
+        span,
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
